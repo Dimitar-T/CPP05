@@ -6,7 +6,7 @@
 /*   By: dtrendaf <dtrendaf@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 16:33:00 by dtrendaf          #+#    #+#             */
-/*   Updated: 2026/03/27 18:05:10 by dtrendaf         ###   ########.fr       */
+/*   Updated: 2026/07/16 15:09:59 by dtrendaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int main ()
 {
-  
     Bureucrat a("Iliq", 150);
     std::cout << a;
     try
@@ -42,8 +41,22 @@ int main ()
     {
         std::cerr << e.what() <<  std::endl;
     }
-    
-    
-    
-    
+    try
+    {
+        a.incrementGrade();
+        std::cout << "Bureucrat: " << a.getName() << " - Grade: " << a.getGrade() << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    try
+    {
+        a.decrementGrade();
+        std::cout << "Bureucrat: " << a.getName() << " - Grade: " << a.getGrade() << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
 }
