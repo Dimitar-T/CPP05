@@ -15,6 +15,7 @@ Introduces Form and exception handling for:
 Invalid form grades
 Signing permissions
 try / catch
+
 ex02 — AForm & Concrete Forms
 
 Introduces abstract forms and polymorphic execution.
@@ -30,8 +31,6 @@ Introduces abstract forms and polymorphic execution.
           ↓              ↓              ↓
      Shrubbery       Robotomy      Presidential
           action          action          action
-
-RobotomyRequestForm has a 50/50 chance of success.
 
 ex03 — Intern
 
