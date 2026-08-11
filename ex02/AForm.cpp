@@ -6,7 +6,7 @@
 /*   By: dtrendaf <dtrendaf@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 16:15:09 by dtrendaf          #+#    #+#             */
-/*   Updated: 2026/08/11 11:40:17 by dtrendaf         ###   ########.fr       */
+/*   Updated: 2026/08/11 12:16:23 by dtrendaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void AForm::execute(Bureaucrat const &executor) const
 		throw FormNotSignedException();
 	if (executor.getGrade() > gradeToExecute)
 		throw GradeTooLowException();
-	executeAction(executor);
+	executeForm(executor);
 }
 
 

@@ -6,7 +6,7 @@
 /*   By: dtrendaf <dtrendaf@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/16 15:15:36 by dtrendaf          #+#    #+#             */
-/*   Updated: 2026/08/11 11:26:08 by dtrendaf         ###   ########.fr       */
+/*   Updated: 2026/08/11 12:16:23 by dtrendaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class AForm
 		const int gradeToSign;
 		const int gradeToExecute;
 	protected:				 
-		virtual void executeAction(Bureaucrat const &executor) const = 0;
+		virtual void executeForm(Bureaucrat const &executor) const = 0;
 	public:
 		//----------constructors-------///
 		AForm(std::string name, int gradeToSign, int gradeToExecute);

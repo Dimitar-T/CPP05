@@ -6,7 +6,7 @@
 /*   By: dtrendaf <dtrendaf@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/30 15:56:26 by dtrendaf          #+#    #+#             */
-/*   Updated: 2026/08/11 11:30:18 by dtrendaf         ###   ########.fr       */
+/*   Updated: 2026/08/11 12:16:23 by dtrendaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ PresidentialPardonForm::~PresidentialPardonForm()
 {
 }
 
-void PresidentialPardonForm::executeAction(Bureaucrat const &executor) const
+void PresidentialPardonForm::executeForm(Bureaucrat const &executor) const
 {
     std::cout << target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
 }

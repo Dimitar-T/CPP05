@@ -6,7 +6,7 @@
 /*   By: dtrendaf <dtrendaf@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/30 15:56:28 by dtrendaf          #+#    #+#             */
-/*   Updated: 2026/08/11 11:25:52 by dtrendaf         ###   ########.fr       */
+/*   Updated: 2026/08/11 12:16:23 by dtrendaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ RobotomyRequestForm::~RobotomyRequestForm()
 {
 }
 
-void RobotomyRequestForm::executeAction(Bureaucrat const &executor) const
+void RobotomyRequestForm::executeForm(Bureaucrat const &executor) const
 {
     std::cout << "Bzzzz... bzzzz... " << std::endl;
     static bool seeded = false;

@@ -6,7 +6,7 @@
 /*   By: dtrendaf <dtrendaf@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/30 15:56:22 by dtrendaf          #+#    #+#             */
-/*   Updated: 2026/08/11 11:28:33 by dtrendaf         ###   ########.fr       */
+/*   Updated: 2026/08/11 12:16:23 by dtrendaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
     PresidentialPardonForm &operator=(PresidentialPardonForm const &other);
     ~PresidentialPardonForm();
 
-    void executeAction(Bureaucrat const &executor) const override;
+    void executeForm(Bureaucrat const &executor) const override;
 };
 
 #endif

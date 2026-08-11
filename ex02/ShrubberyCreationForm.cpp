@@ -6,7 +6,7 @@
 /*   By: dtrendaf <dtrendaf@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/30 15:56:35 by dtrendaf          #+#    #+#             */
-/*   Updated: 2026/08/11 12:10:25 by dtrendaf         ###   ########.fr       */
+/*   Updated: 2026/08/11 12:16:23 by dtrendaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 {
 }
 
-void ShrubberyCreationForm::executeAction(Bureaucrat const &executor) const
+void ShrubberyCreationForm::executeForm(Bureaucrat const &executor) const
 {
 	std::ofstream file(target + "_shrubbery");
 	if (!file)
