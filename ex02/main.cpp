@@ -6,7 +6,7 @@
 /*   By: dtrendaf <dtrendaf@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 16:33:00 by dtrendaf          #+#    #+#             */
-/*   Updated: 2026/08/11 12:06:50 by dtrendaf         ###   ########.fr       */
+/*   Updated: 2026/08/11 15:09:42 by dtrendaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
-
-
-#define COLOR_RESET "\033[0m"
-#define COLOR_RED "\033[31m"
 
 int main ()
 {
@@ -126,6 +122,7 @@ int main ()
             RobotomyRequestForm form("Marvin");
             bob.signForm(form);
             form.execute(bob);
+            std::cout << std::endl;
         }
     }
     catch(const std::exception &e)

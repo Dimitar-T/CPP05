@@ -1,0 +1,23 @@
+ex02:
+
+AForm::execute()
+       │
+       ├── check signed
+       ├── check grade
+       │
+       └── executeForm()  ← pure virtual(AForm)
+                              │
+               ┌──────────────┼──────────────┐
+               |              |              |
+          Shrubbery       Robotomy        Presidential
+          action          action           action
+
+ex03:
+defined a function-pointer type that points to functions which return an AForm* and take a std::string
+
+ 					creators[index](target)
+                               │
+                  ┌────────────┼────────────┐
+                  |            |            |
+          createShrubbery  createRobotomy  createPardon
+		  index 0				1              2

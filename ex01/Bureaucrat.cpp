@@ -1,43 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureucrat.cpp                                      :+:      :+:    :+:   */
+/*   Bureaucrat.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dtrendaf <dtrendaf@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 17:07:03 by dtrendaf          #+#    #+#             */
-/*   Updated: 2026/07/24 17:27:00 by dtrendaf         ###   ########.fr       */
+/*   Updated: 2026/07/30 16:05:41 by dtrendaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureucrat.hpp"
+#include "Bureaucrat.hpp"
 #include "Exceptions.hpp"
 #include "Form.hpp"
 
-Bureucrat::Bureucrat(std::string const name, int grade): name(name), grade(grade) 
+Bureaucrat::Bureaucrat(std::string const name, int grade): name(name), grade(grade) 
 {
     checkGrade(grade);
 }
 
-Bureucrat::Bureucrat(Bureucrat const &other)
+Bureaucrat::Bureaucrat(Bureaucrat const &other)
 {
     *this = other;
-    std::cout << "A Bureucrat has been created via the copy constructor." << std::endl;
+    std::cout << "A Bureaucrat has been created via the copy constructor." << std::endl;
 }
 
-Bureucrat &Bureucrat::operator=(const Bureucrat &other)
+Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)
 {
     if (this != &other)
         grade = other.grade;
     return *this;
 }
 
-Bureucrat::~Bureucrat()
+Bureaucrat::~Bureaucrat()
 {
-    std::cout << "Bureucrat " << name << " has been destroyed" << std::endl;
+    std::cout << "Bureaucrat " << name << " has been destroyed" << std::endl;
 }
 
-void Bureucrat::checkGrade(int grade)
+void Bureaucrat::checkGrade(int grade)
 {
     if (grade <= 0)
         throw GradeTooHighException();
@@ -45,42 +45,42 @@ void Bureucrat::checkGrade(int grade)
         throw GradeTooLowException();
 }
 
-int Bureucrat::getGrade() const
+int Bureaucrat::getGrade() const
 {
     return (grade);
 }
 
-const std::string  Bureucrat::getName() const
+const std::string  Bureaucrat::getName() const
 {
     return (name);
 }
 
-void Bureucrat::decrementGrade()
+void Bureaucrat::decrementGrade()
 {
     checkGrade(grade + 1);
     grade++;
 }
 
-void Bureucrat::incrementGrade()
+void Bureaucrat::incrementGrade()
 {
     checkGrade(grade - 1);
     grade--;
 }
 
-void Bureucrat::signForm(Form &form)
+void Bureaucrat::signForm(Form &Form)
 {
     try
     {
-        form.beSigned(*this);
-        std::cout << name << " signed " << form.getName() << std::endl;
+        Form.beSigned(*this);
+        std::cout << name << " signed " << Form.getName() << std::endl;
     }
     catch (const std::exception &e)
     {
-        std::cout << name << " couldn't sign " << form.getName() << " because " << e.what() << std::endl;
+        std::cout << name << " couldn't sign " << Form.getName() << " because " << e.what() << std::endl;
     }
 }
 
-std::ostream &operator<<(std::ostream& stream, Bureucrat &b)
+std::ostream &operator<<(std::ostream& stream, Bureaucrat &b)
 {
     stream << b.getName() << ", bureaucrat grade " << b.getGrade() << '.' << std::endl;
     return stream;

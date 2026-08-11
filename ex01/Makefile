@@ -1,8 +1,8 @@
-NAME = form
+NAME = Form
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++17
 
-SRCS = main.cpp Bureucrat.cpp Form.cpp
+SRCS = main.cpp Bureaucrat.cpp Form.cpp
 
 OBJ = $(SRCS:.cpp=.o)
 

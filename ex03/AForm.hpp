@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dtrendaf <dtrendaf@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/16 15:15:36 by dtrendaf          #+#    #+#             */
-/*   Updated: 2026/08/11 14:28:34 by dtrendaf         ###   ########.fr       */
+/*   Updated: 2026/08/11 12:16:23 by dtrendaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FORM_HPP
-#define FORM_HPP
+#ifndef AFORM_HPP
+#define AFORM_HPP
 
 #include <exception>
 #include <iostream>
@@ -19,18 +19,21 @@
 
 class Bureaucrat;
 
-class Form
+class AForm
 {
 	private:
 		const std::string name;
 		bool isSigned;
 		const int gradeToSign;
 		const int gradeToExecute;
+	protected:				 
+		virtual void executeForm(Bureaucrat const &executor) const = 0;
 	public:
-		Form(std::string name, int gradeToSign, int gradeToExecute);
-		Form(const Form &other);
-		Form &operator=(const Form &other);
-		~Form();
+		//----------constructors-------///
+		AForm(std::string name, int gradeToSign, int gradeToExecute);
+		AForm(const AForm &other);
+		AForm &operator=(const AForm &other);
+		virtual ~AForm();
 		//----------get---------//
 		std::string getName() const;
 		bool getIsSigned() const;
@@ -38,5 +41,7 @@ class Form
 		int getGradeToExecute() const;
 		//----------methods---------//
 		void beSigned(const Bureaucrat &b);
+		void execute(Bureaucrat const &executor) const;
+		
 };
 #endif

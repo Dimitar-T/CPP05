@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureucrat.hpp                                      :+:      :+:    :+:   */
+/*   Bureaucrat.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dtrendaf <dtrendaf@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -17,20 +17,20 @@
 
 
 
-class Bureucrat
+class Bureaucrat
 {
 private:
     const std::string  name;
     int grade;
 public:
     //------------constructors and destructors---------//
-    Bureucrat(std::string const name, int grade);
-    Bureucrat(Bureucrat const &other);
-    Bureucrat &operator=(Bureucrat const &other);
-    ~Bureucrat();
+    Bureaucrat(std::string const name, int grade);
+    Bureaucrat(Bureaucrat const &other);
+    Bureaucrat &operator=(Bureaucrat const &other);
+    ~Bureaucrat();
     //----------get---------//
     std::string const getName() const;
-    int getGrade();
+    int getGrade() const;
     //----------methods---------//
     void checkGrade(int grade);
     void incrementGrade();
@@ -38,6 +38,6 @@ public:
 
 };
 ///----------overload---------//
-std::ostream& operator<<(std::ostream& stream, Bureucrat &b);
+std::ostream& operator<<(std::ostream& stream, Bureaucrat &b);
 
 #endif

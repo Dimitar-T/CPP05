@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureucrat.hpp                                      :+:      :+:    :+:   */
+/*   Bureaucrat.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dtrendaf <dtrendaf@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 17:06:55 by dtrendaf          #+#    #+#             */
-/*   Updated: 2026/07/24 17:24:30 by dtrendaf         ###   ########.fr       */
+/*   Updated: 2026/07/30 16:05:41 by dtrendaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
 
-#ifndef BUREUCRAT_HPP
-#define BUREUCRAT_HPP
+#ifndef BUREAUCRAT_HPP
+#define BUREAUCRAT_HPP
 
-class Form;
+class AForm;
 
-class Bureucrat
+class Bureaucrat
 {
 private:
     const std::string  name;
     int grade;
 public:
     //------------constructors and destructors---------//
-    Bureucrat(std::string const name, int grade);
-    Bureucrat(Bureucrat const &other);
-    Bureucrat &operator=(Bureucrat const &other);
-    ~Bureucrat();
+    Bureaucrat(std::string const name, int grade);
+    Bureaucrat(Bureaucrat const &other);
+    Bureaucrat &operator=(Bureaucrat const &other);
+    ~Bureaucrat();
     //----------get---------//
     std::string const getName() const;
     int getGrade() const;
@@ -36,10 +36,10 @@ public:
     void checkGrade(int grade);
     void incrementGrade();
     void decrementGrade();
-    void signForm(Form &form);
+    void signForm(AForm &AForm);
 
 };
 ///----------overload---------//
-std::ostream& operator<<(std::ostream& stream, Bureucrat &b);
+std::ostream& operator<<(std::ostream& stream, Bureaucrat &b);
 
 #endif

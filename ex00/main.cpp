@@ -6,15 +6,15 @@
 /*   By: dtrendaf <dtrendaf@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 16:33:00 by dtrendaf          #+#    #+#             */
-/*   Updated: 2026/07/16 15:09:59 by dtrendaf         ###   ########.fr       */
+/*   Updated: 2026/08/04 15:11:40 by dtrendaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureucrat.hpp"
+#include "Bureaucrat.hpp"
 
 int main ()
 {
-    Bureucrat a("Iliq", 150);
+    Bureaucrat a("Iliq", 150);
     std::cout << a;
     try
     {
@@ -26,7 +26,7 @@ int main ()
     }
     try
     {
-        Bureucrat b("ls", 0);
+        Bureaucrat b("ls", 0);
     }
     catch(const std::exception& e)
     {
@@ -34,7 +34,7 @@ int main ()
     }
     try
     {
-       Bureucrat b("ls", 150);
+       Bureaucrat b("ls", 150);
        b.decrementGrade();
     }
     catch(const std::exception& e)
@@ -44,7 +44,7 @@ int main ()
     try
     {
         a.incrementGrade();
-        std::cout << "Bureucrat: " << a.getName() << " - Grade: " << a.getGrade() << std::endl;
+        std::cout << "Bureaucrat: " << a.getName() << " - Grade: " << a.getGrade() << std::endl;
     }
     catch(const std::exception& e)
     {
@@ -53,7 +53,7 @@ int main ()
     try
     {
         a.decrementGrade();
-        std::cout << "Bureucrat: " << a.getName() << " - Grade: " << a.getGrade() << std::endl;
+        std::cout << "Bureaucrat: " << a.getName() << " - Grade: " << a.getGrade() << std::endl;
     }
     catch(const std::exception& e)
     {
