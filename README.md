@@ -19,17 +19,17 @@ ex02 — AForm & Concrete Forms
 
 Introduces abstract forms and polymorphic execution.
 
-AForm::execute()
-│
-├── check signed
-├── check grade
-│
-└── executeForm()
-        │
-        ┌──────────────┼──────────────┐
-        ↓              ↓              ↓
-   Shrubbery       Robotomy      Presidential
-     action          action          action
+     AForm::execute()
+     │
+     ├── check signed
+     ├── check grade
+     │
+     └── executeForm()
+          │
+          ┌──────────────┼──────────────┐
+          ↓              ↓              ↓
+     Shrubbery       Robotomy      Presidential
+          action          action          action
 
 RobotomyRequestForm has a 50/50 chance of success.
 
