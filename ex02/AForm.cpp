@@ -75,6 +75,7 @@ void AForm::execute(Bureaucrat const &executor) const
 		throw FormNotSignedException();
 	if (executor.getGrade() > gradeToExecute)
 		throw GradeTooLowException();
+	std::cout << executor.getName() << " executed " << name << std::endl;
 	executeForm(executor);
 }
 
